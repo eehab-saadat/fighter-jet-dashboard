@@ -1,5 +1,8 @@
 // postJets.js
 import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const jets = [
     {
@@ -125,7 +128,7 @@ const jets = [
   ];
   
 
-const API_URL = 'http://localhost:3000/api/jets/';
+const API_URL = process.env.API_ROUTE + '/api/jets/';
 
 const populateJets = async () => {
   for (const jet of jets) {
